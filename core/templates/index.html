@@ -1,0 +1,9 @@
+Index <br>
+<a href={% url 'post-create' %}><p>create</p></a>
+<hr>
+{{name}} 
+<hr>
+<br>
+{% for post in post %}
+    {{post.author}}
+{% endfor %}

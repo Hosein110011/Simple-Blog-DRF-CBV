@@ -1,0 +1,6 @@
+<a href={% url 'blog:post-create' %}><p>create</p></a>
+{% for p in posts %}
+    <a href = {% url 'blog:post-detail' pk=p.id %}><h1>{{p.id}} - {{p.title}}</h1></a>
+    <a href= {% url 'blog:post-update' pk=p.id %}><h3>Edit</h3></a>
+    <a href= {% url 'blog:post-delete' pk=p.id %}><strong><h5>delete</h5></strong></a>
+{% endfor %}
